@@ -32,32 +32,49 @@
         </div>
       </div>
     </header>
-    Cardholder Name
-    e.g. Jane Appleseed
-
-    Card Number
-    e.g. 1234 5678 9123 0000
-
-    Exp. Date (MM/YY)
-    MM
-    YY
-
-    CVC
-    e.g. 123
-
-    Confirm
-
-    <!-- Completed state start -->
-
-    Thank you!
-    We've added your card details
-    Continue
-
-    <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </footer>
+    <form class="input-detalhes">
+      <div class="input-1">
+        <h4>Name</h4>
+        <input type="text" placeholder="e.g. Jane Appleseed" name="nome" id="nome" maxlength="24" required>
+        <span class="msg-erro erro-1">Não pode ficar em branco</span>
+      </div>
+      <div class="input-2">
+        <h4>Card Number</h4>
+        <input type="text" name="numero" placeholder="e.g. 1234 5678 9123 0000" id="n-cartao" minlength="19"
+          maxlength="19" pattern="[0-9]+">
+        <span class="msg-erro erro-2-2">Não pode ficar em branco</span>
+        <span class="msp-erro erro-2">Deve ter 16 digitos</span>
+      </div>
+      <div class="data">
+        <div class="exp-data">
+          <h4>Exp. Date (MM/YY)</h4>
+          <input type="text" name="exp" placeholder="MM" id="mes" minlength="2" maxlength="2" pattern="[0-9]+" required>
+          <input type="text" name="exp" placeholder="YY" id="ano" minlength="2" maxlength="2" pattern="[0-9]+" required>
+          <span class="msg-erro erro-3">Não pode ficar em branco</span>
+          <samp class="msg-erro erro3-3">Insira um número entre 01 e 12</samp>
+        </div>
+        <div class="cvc">
+          <h4>CVC</h4>
+          <input type="text" name="CVC" placeholder="e.g. 123" id="cvc" minlength="3" maxlength="3" pattern="[0-9]+"
+            required>
+          <span class="msg-erro erro-4">Não pode ficar em branco</span>
+        </div>
+      </div>
+      <button id="submit">Confirmar</button>
+    </form>
+    <main class="concluido">
+      <img src="./images/icon-complete.svg" alt="icone cncluido">
+      <h5>Thank you!</h5>
+      <p class="concluido-p">Adicionamos as informações do seu cartão</p>
+      <button id="continue">Continue</button>
+    </main>
   </div>
+  <footer class="atribuicao">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Edson Sequeira</a>.
+  </footer>
+  </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
