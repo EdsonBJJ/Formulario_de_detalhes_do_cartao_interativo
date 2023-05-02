@@ -9,6 +9,21 @@
   vertical-align: baseline;
 }
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+img {
+  display: block;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
