@@ -89,6 +89,22 @@ header {
   width: 100%;
 }
 
+.frente,
+.verso {
+  width: 18rem;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 10px 30px 30px hsla(278, 68%, 11%, 0.1);
+}
+
+.frente {
+  top: 7.5rem;
+  left: 0, 25rem;
+  z-index: 1;
+}
+
+
+
 .attribution {
   font-size: 11px;
   text-align: center;
