@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
-  <title>Formulario de detalhes do cartao interativo</title>
+  <link rel="stylesheet" href="app.css">
+  <title>Frontend Mentor | Interactive card details form</title>
 </head>
 
 <body>
-  <div class="container">
+  <div class="wrapper">
     <header>
-      <div class="cartoes">
-        <div class="frente">
-          <img src="./images/bg-card-front.png" alt="Frente do cartão">
-          <section class="frente_info">
-            <img src="./images/card-logo.svg" alt="Logo do cartão" class="img_1">
+      <div class="cards">
+        <div class="front-page">
+          <img src="images/bg-card-front.png" alt="">
+          <section class="front-page-info">
+            <img src="images/card-logo.svg" alt="" class="img-1-1">
             <h1>0000 0000 0000 0000</h1>
             <div class="info">
               <h2>Jane Appleseed</h2>
@@ -26,55 +25,57 @@
             </div>
           </section>
         </div>
-        <div class="verso">
-          <img src="./images/bg-card-back.png" alt="Verso do cartão">
-          <p class="cvc">000</p>
+        <div class="back-page">
+          <img src="images/bg-card-back.png" alt="">
+          <p class="cvc-content">000</p>
         </div>
       </div>
     </header>
-    <form class="input-detalhes">
+    <form class="input-details">
       <div class="input-1">
-        <h4>Name</h4>
-        <input type="text" placeholder="e.g. Jane Appleseed" name="nome" id="nome" maxlength="24" required>
-        <span class="msg-erro erro-1">Não pode ficar em branco</span>
+        <h4>Cardholder Name</h4>
+        <input type="text" placeholder="e.g. Jane Appleseed" name="name" id="name" maxlength="24" required>
+        <span class="error-msg error-1">Can't be blank</span>
       </div>
       <div class="input-2">
         <h4>Card Number</h4>
-        <input type="text" name="numero" placeholder="e.g. 1234 5678 9123 0000" id="n-cartao" minlength="19"
-          maxlength="19" pattern="[0-9]+">
-        <span class="msg-erro erro-2-2">Não pode ficar em branco</span>
-        <span class="msp-erro erro-2">Deve ter 16 digitos</span>
+        <input type="text" name="number" placeholder="e.g. 1234 5678 9123 0000" id="card-num" minlength="19"
+          maxlength="19" required pattern="[0-9]+">
+        <span class="error-msg error-2-2">Can't be blank</span>
+        <span class="error-msg error-2">Must be 16 digits</span>
       </div>
-      <div class="data">
-        <div class="exp-data">
+      <div class="date">
+        <div class="exp-date">
           <h4>Exp. Date (MM/YY)</h4>
-          <input type="text" name="exp" placeholder="MM" id="mes" minlength="2" maxlength="2" pattern="[0-9]+" required>
-          <input type="text" name="exp" placeholder="YY" id="ano" minlength="2" maxlength="2" pattern="[0-9]+" required>
-          <span class="msg-erro erro-3">Não pode ficar em branco</span>
-          <samp class="msg-erro erro3-3">Insira um número entre 01 e 12</samp>
+
+          <input type="text" name="exp" placeholder="MM" id="month" minlength="2" maxlength="2" required>
+
+          <input type="text" name="exp" placeholder="YY" id="year" minlength="2" maxlength="2" pattern="[0-9]+"
+            required>
+          <span class="error-msg error-3">Can't be blank</span>
+          <span class="error-msg error-3-3">Please enter a number between 01 and 12</span>
         </div>
         <div class="cvc">
           <h4>CVC</h4>
-          <input type="text" name="CVC" placeholder="e.g. 123" id="cvc" minlength="3" maxlength="3" pattern="[0-9]+"
+          <input type="text" name="cvc" placeholder="e.g. 123" id="cvc" minlength="3" maxlength="3" pattern="[0-9]+"
             required>
-          <span class="msg-erro erro-4">Não pode ficar em branco</span>
+          <span class="error-msg error-4">Can't be blank</span>
         </div>
       </div>
-      <button id="submit">Confirmar</button>
+      <!-- the attribute `required` is to indicate that an input field is to be filled for submission -->
+      <button id="submit">Confirm</button>
     </form>
-    <main class="concluido">
-      <img src="./images/icon-complete.svg" alt="icone cncluido">
+
+    <!-- Completed state start -->
+    <main class="completed">
+      <img src="images/icon-complete.svg" alt="icon complete">
       <h5>Thank you!</h5>
-      <p class="concluido-p">Adicionamos as informações do seu cartão</p>
+      <p class="completed-p">We've added your card details</p>
       <button id="continue">Continue</button>
     </main>
   </div>
-  <footer class="atribuicao">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Edson Sequeira</a>.
-  </footer>
-  </div>
-  <script src="./script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
