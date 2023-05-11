@@ -117,6 +117,90 @@ header {
   margin-bottom: 2.5rem;
 }
 
+h1 {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.2rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.verso {
+  top: -8rem;
+  right: -3.75rem;
+  z-index: 0;
+}
+
+.cvc {
+  font-size: 0.75rem;
+  position: absolute;
+  top: 4.5rem;
+  right: 2.2rem;
+  color: hsl(270, 3%, 87%);
+  letter-spacing: 0.05;
+}
+
+.input-detalhes {
+  max-width: 350px;
+  margin-top: 8.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+h4,
+h5 {
+  color: hsl(278, 68%, 11%);
+}
+
+.input-1,
+.input-2,
+.date {
+  margin-bottom: 1rem;
+  margin-right: 1.75rem;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 0.3rem
+}
+
+imput {
+  font-family: 'Space Grotesk', sans-serif;
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border-left: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(270, 3%, 87%);
+  outline: none;
+  margin-bottom: 0.3rem;
+}
+
+from input:focus {
+  border-image: linear-gradient(to bottom,
+      hsl(249, 99%, 64%),
+      hsl(249, 99%, 64%));
+  border-image-slice: 1;
+  border-radius: 0.5rem !important;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
